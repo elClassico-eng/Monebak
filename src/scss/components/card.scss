@@ -70,8 +70,8 @@
     }
 
     @media (min-width: 320px) and (max-width: 767px) {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(auto-fill, 30rem);
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(7, 30rem);
         gap: 1rem;
     }
 
