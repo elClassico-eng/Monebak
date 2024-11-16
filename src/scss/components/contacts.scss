@@ -217,7 +217,20 @@
         }
     }
 
+    @media (max-width: 320px) {
+        & .contacts__content {
+            flex-direction: column;
+        }
+    }
+
+    @media (min-width: 321px) and (max-width: 767px) {
+        & .contacts__content {
+            flex-direction: column;
+        }
+    }
+
     @media (max-width: 768px) {
+        width: 100%;
         padding: 0 2% 0 2%;
 
         .contacts__content {
@@ -256,12 +269,6 @@
             .contacts__form__input div {
                 flex-direction: column;
             }
-        }
-    }
-
-    @media (max-width: 320px) {
-        & .contacts__content {
-            flex-direction: column;
         }
     }
 }

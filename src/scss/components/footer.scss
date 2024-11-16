@@ -165,7 +165,50 @@
         }
     }
 
-    @media (max-width: 720px) {
+    @media (max-width: 320px) {
+        & {
+            width: 100%;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+
+            .footer__aside {
+                .footer__feedback {
+                    .footer__feedback__ad span {
+                        display: none;
+                    }
+
+                    .footer__feedback__ad::after {
+                        content: TODO;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: 320px) and (max-width: 767px) {
+        & {
+            width: 100%;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+
+            .footer__aside {
+                .footer__feedback {
+                    .footer__feedback__ad span {
+                        display: none;
+                    }
+
+                    .footer__feedback__ad::after {
+                        content: TODO;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        width: 100%;
         & .footer__navigate {
             padding: 0 5%;
             .footer__nav__container {
@@ -207,26 +250,6 @@
                     .footer__feedback__number {
                         font-size: 2.3rem;
                         gap: 2rem;
-                    }
-                }
-            }
-        }
-    }
-
-    @media (max-width: 320px) {
-        & {
-            grid-template-columns: repeat(1, 1fr);
-            grid-template-rows: repeat(2, 1fr);
-
-            .footer__aside {
-                .footer__feedback {
-                    .footer__feedback__ad span {
-                        display: none;
-                    }
-
-                    .footer__feedback__ad::after {
-                        content: TODO;
-                        color: #fff;
                     }
                 }
             }
