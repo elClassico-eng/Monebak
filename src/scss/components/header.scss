@@ -59,12 +59,12 @@
             flex-direction: column;
             gap: 0.3rem;
 
-            & span {
+            & a[href^="tel:"] {
                 font-size: 1.5rem;
                 font-weight: 500;
             }
 
-            a {
+            a[href^="mailto:"] {
                 font-size: 1.3rem;
                 color: var.$more-text;
             }
