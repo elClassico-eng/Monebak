@@ -121,10 +121,6 @@
     }
 
     @media (min-width: 320px) and (max-width: 767px) {
-        & {
-            width: 100%;
-        }
-
         & .header__navbar {
             .header__navbar__container {
                 display: none;
