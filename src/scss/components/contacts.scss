@@ -69,75 +69,100 @@
             display: flex;
             flex-direction: column;
             max-width: 600px;
+            width: 600px;
 
-            & h2 {
+            .contacts__form__question {
                 margin-bottom: 2rem;
             }
 
-            .contacts__form__input {
-                @include flex-row;
-                gap: 3rem;
-
-                & div {
+            //*****************************
+            .contacts__form {
+                .contacts__form__input {
                     display: flex;
-                    gap: 3rem;
-                }
-
-                & input[type="text"] {
-                    max-width: 300px;
-                    max-height: 52px;
-                    width: 300px;
-                    padding-top: 1.7rem;
-                    padding-left: 2rem;
-                    padding-bottom: 11px;
-                }
-
-                & textarea {
-                    -moz-appearance: none;
-                    max-width: 63rem;
-                    max-height: 13.3rem;
-                    height: 13.3rem;
-                    padding-top: 1.7rem;
-                    padding-left: 2rem;
+                    flex-direction: column;
+                    gap: 2.8rem;
                     margin-bottom: 2rem;
-                }
 
-                & input[type="text"],
-                & textarea {
-                    width: 100%;
-                    max-width: 100%;
-                    padding-top: 1.7rem;
-                    border: none;
-                    border-radius: 1.4rem;
-                    background-color: var.$background-color;
-                    transition: background-color 0.3s ease;
-                }
+                    .contacts__form__row {
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        gap: 6rem;
+                    }
 
-                & input[type="text"]:hover,
-                & textarea:hover {
-                    background-color: #fff;
-                    border: 1px solid var.$background-color;
-                }
-                & input[type="text"]:focus,
-                & textarea:focus {
-                    border: 1px solid var.$background-color;
-                    background-color: #fff;
-                }
+                    .contacts__form__label {
+                        position: relative;
+                    }
 
-                // Валидация реализована через user-valid и user-invalid
+                    .contacts__form__label input,
+                    .contacts__form__label textarea {
+                        width: 100%;
+                        padding: 1.7rem 0 1.1rem 2rem;
+                        font-size: 1.6rem;
+                        line-height: 1.6rem;
+                        background-color: rgba(245, 245, 245, 1);
+                        border: 1px solid rgba(230, 230, 230, 1);
+                        border-radius: 1.4rem;
+                        transition: border-color 0.3s ease,
+                            background-color 0.3s ease;
+                    }
 
-                & input[type="text"]:user-valid,
-                & textarea:valid {
-                    border: 1px solid var.$background-color;
-                    background-color: inherit;
-                }
-                & input[type="text"]:user-invalid,
-                & textarea:user-invalid {
-                    border: 1px solid var.$background-color;
-                    background-color: #bf27381f;
+                    .contacts__form__label textarea {
+                        resize: none;
+                        height: 13.3rem;
+                    }
+
+                    .contacts__form__label label {
+                        position: absolute;
+                        top: 50%;
+                        left: 2rem;
+                        transform: translateY(-50%);
+                        font-size: 1.6rem;
+                        line-height: 1.6rem;
+                        color: rgba(121, 121, 134, 1);
+                        pointer-events: none;
+                        transition: 0.3s ease-in-out;
+                    }
+
+                    .contacts__form__label input:focus + label,
+                    .contacts__form__label
+                        input:not(:placeholder-shown)
+                        + label,
+                    .contacts__form__label textarea:focus + label,
+                    .contacts__form__label
+                        textarea:not(:placeholder-shown)
+                        + label {
+                        top: 1rem;
+                        left: 2rem;
+                        font-size: 1.2rem;
+                        color: rgba(121, 121, 134, 1);
+                    }
+
+                    .contacts__form__input-error {
+                        font-size: 1.2rem;
+                        color: var.$main-red;
+                        margin-top: 0.3rem;
+                        margin-left: 3rem;
+                        display: none;
+                    }
+
+                    .contacts__form__label
+                        input:user-invalid
+                        + label
+                        + .contacts__form__input-error,
+                    .contacts__form__label
+                        textarea:user-invalid
+                        + label
+                        + .contacts__form__input-error {
+                        display: block;
+                    }
+
+                    .contacts__form__label input:user-invalid {
+                        background-color: rgba(191, 39, 56, 0.12);
+                    }
                 }
             }
 
+            //*********************
             .contacts__form__agreement {
                 display: flex;
                 gap: 1.6rem;
@@ -221,10 +246,20 @@
         & .contacts__content {
             flex-direction: column;
         }
+
+        & .contacts__form__row {
+            display: flex;
+            flex-direction: column;
+        }
     }
 
     @media (min-width: 321px) and (max-width: 767px) {
         & .contacts__content {
+            flex-direction: column;
+        }
+
+        & .contacts__form__row {
+            display: flex;
             flex-direction: column;
         }
     }

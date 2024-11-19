@@ -156,32 +156,54 @@
                         </address>
                     </article>
                     <aside class="contacts__form__container">
-                        <h2>Остались вопросы?</h2>
+                        <h2 class="contacts__form__question">
+                            Остались вопросы?
+                        </h2>
                         <form action="#" method="post" class="contacts__form">
-                            <div class="contacts__form__input">
-                                <div>
-                                    <input
-                                        type="text"
-                                        name="name"
-                                        id="name"
-                                        placeholder="Ваше имя"
-                                        required
-                                    />
-                                    <input
-                                        type="text"
-                                        name="tel"
-                                        id="tel"
-                                        placeholder="Ваш телефон"
-                                        required
-                                    />
+                            <fieldset class="contacts__form__input">
+                                <div class="contacts__form__row">
+                                    <div class="contacts__form__label">
+                                        <input
+                                            type="text"
+                                            name="name"
+                                            id="name"
+                                            placeholder=" "
+                                            required
+                                        />
+                                        <label for="name">Ваше имя</label>
+                                        <span
+                                            class="contacts__form__input-error"
+                                            >Является обязательным полем</span
+                                        >
+                                    </div>
+                                    <div class="contacts__form__label">
+                                        <input
+                                            type="tel"
+                                            name="tel"
+                                            id="tel"
+                                            placeholder=" "
+                                            required
+                                        />
+                                        <label for="tel">Ваш телефон</label>
+                                        <span
+                                            class="contacts__form__input-error"
+                                            >Является обязательным полем</span
+                                        >
+                                    </div>
                                 </div>
-                                <textarea
-                                    name="tel"
-                                    id="tel"
-                                    placeholder="Ваше сообщение"
-                                    required
-                                ></textarea>
-                            </div>
+                                <div class="contacts__form__label">
+                                    <textarea
+                                        name="meaasge"
+                                        id="message"
+                                        placeholder=" "
+                                        required
+                                    ></textarea>
+                                    <label for="message">Ваше сообщение</label>
+                                    <span class="contacts__form__input-error"
+                                        >Является обязательным полем</span
+                                    >
+                                </div>
+                            </fieldset>
 
                             <div class="contacts__form__agreement">
                                 <input
