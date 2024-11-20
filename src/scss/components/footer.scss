@@ -120,6 +120,7 @@
 
             .footer__feedback__btn {
                 max-width: 19rem;
+                max-height: 5.2rem;
                 width: 19rem;
                 padding: 1.9rem 2.7rem 1.9rem 2.7rem;
                 font-family: "RoadRadio", sans-serif;
@@ -127,9 +128,9 @@
                 color: #fff;
                 line-height: 1.4rem;
                 align-items: center;
-                border: 1px solid v.$footer-btn;
+                border: 2px solid v.$footer-btn;
                 background-color: inherit;
-                border-radius: v.$border-radius-desktop;
+                border-radius: v.$button-radius;
                 cursor: pointer;
                 transition: background-color 0.5s ease;
 
