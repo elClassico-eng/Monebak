@@ -68,8 +68,7 @@
         .contacts__form__container {
             display: flex;
             flex-direction: column;
-            max-width: 600px;
-            width: 600px;
+            max-width: 60rem;
 
             .contacts__form__question {
                 margin-bottom: 2rem;
@@ -77,6 +76,7 @@
 
             //*****************************
             .contacts__form {
+                width: 100%;
                 .contacts__form__input {
                     display: flex;
                     flex-direction: column;
@@ -245,28 +245,85 @@
     @media (max-width: 320px) {
         & .contacts__content {
             flex-direction: column;
-        }
 
-        & .contacts__form__row {
-            display: flex;
-            flex-direction: column;
+            .contacts__form__container {
+                padding-left: 1.6rem;
+                padding-right: 1.4rem;
+
+                .contacts__form__question {
+                    font-size: 2rem;
+                    margin-bottom: 1rem;
+                }
+
+                .contacts__form {
+                    .contacts__form__input {
+                        margin-right: 1.4rem;
+                        margin-bottom: 2rem;
+                        gap: 1.2rem;
+
+                        .contacts__form__row {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 1rem;
+                        }
+                    }
+
+                    .contacts__form__agreement {
+                        align-items: baseline;
+                        margin-bottom: 2.1rem;
+
+                        & label {
+                            overflow-wrap: break-word;
+                            white-space: normal;
+                        }
+                    }
+                }
+            }
         }
     }
 
     @media (min-width: 321px) and (max-width: 767px) {
         & .contacts__content {
             flex-direction: column;
-        }
 
-        & .contacts__form__row {
-            display: flex;
-            flex-direction: column;
+            .contacts__form__container {
+                padding-left: 1.6rem;
+                padding-right: 1.4rem;
+
+                .contacts__form__question {
+                    font-size: var.$fz-h2-tablet;
+                    margin-bottom: 1rem;
+                }
+
+                .contacts__form {
+                    .contacts__form__input {
+                        margin-bottom: 2rem;
+                        gap: 1.2rem;
+
+                        .contacts__form__row {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 1rem;
+                        }
+                    }
+
+                    .contacts__form__agreement {
+                        align-items: baseline;
+                        margin-bottom: 2.1rem;
+
+                        & label {
+                            overflow-wrap: break-word;
+                            white-space: normal;
+                        }
+                    }
+                }
+            }
         }
     }
 
     @media (max-width: 768px) {
         width: 100%;
-        padding: 0 2% 0 2%;
+        padding: 0 2.9rem 0 2.9rem;
 
         .contacts__content {
             .contacts__info {
@@ -276,33 +333,39 @@
                     }
                 }
             }
-        }
 
-        .contacts__content h2 {
-            font-size: var.$fz-h2-tablet;
-        }
+            .contacts__form__container {
+                .contacts__form__question {
+                    font-size: var.$fz-h2-tablet;
+                }
 
-        .contacts__form__container {
-            .contacts__form__input {
-                gap: 1.2rem;
+                .contacts__form {
+                    .contacts__form__input {
+                        margin-right: 1.4rem;
+                        margin-bottom: 2rem;
+                        gap: 1.2rem;
 
-                .contacts__form__agreement {
-                    gap: 0.3rem;
-
-                    & label {
-                        font-size: 1.3rem;
-                        line-height: 1.5rem;
+                        .contacts__form__row {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 1rem;
+                        }
                     }
 
-                    & input[type="checkbox"] {
-                        width: 2rem;
-                        height: 2rem;
+                    .contacts__form__agreement {
+                        align-items: baseline;
+                        margin-bottom: 2.1rem;
+
+                        & label {
+                            overflow-wrap: break-word;
+                            white-space: normal;
+                        }
                     }
                 }
-            }
 
-            .contacts__form__input div {
-                flex-direction: column;
+                .contacts__form__input div {
+                    flex-direction: column;
+                }
             }
         }
     }
