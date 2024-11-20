@@ -352,9 +352,6 @@
     }
 
     @media (min-width: 769px) and (max-width: 1040px) {
-        & .contacts__content {
-            grid-template-rows: repeat(2, 1fr);
-        }
         @include query.media-tablet-form;
     }
 }

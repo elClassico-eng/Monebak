@@ -33,7 +33,7 @@
                     transition: text-decoration 1s ease-in-out;
 
                     &:hover {
-                        text-decoration: underline;
+                        color: v.$main-red;
                     }
                 }
             }
