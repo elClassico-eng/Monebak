@@ -1,5 +1,7 @@
 @use "/src/scss/variables.scss" as var;
 
+@use "../mixins/mediaQuery.scss" as query;
+
 @mixin flex-col {
     display: flex;
 }
@@ -322,100 +324,10 @@
     }
 
     @media (max-width: 768px) {
-        width: 100%;
-        padding: 0 2.9rem 0 2.9rem;
-
-        .contacts__content {
-            .contacts__info {
-                .contacts__address {
-                    .contacts__address__important-info p {
-                        font-size: 1.4rem;
-                    }
-                }
-            }
-
-            .contacts__form__container {
-                .contacts__form__question {
-                    font-size: var.$fz-h2-tablet;
-                }
-
-                .contacts__form {
-                    .contacts__form__input {
-                        margin-right: 1.4rem;
-                        margin-bottom: 2rem;
-                        gap: 1.2rem;
-
-                        .contacts__form__row {
-                            display: flex;
-                            flex-direction: column;
-                            gap: 1rem;
-                        }
-                    }
-
-                    .contacts__form__agreement {
-                        align-items: baseline;
-                        margin-bottom: 2.1rem;
-
-                        & label {
-                            overflow-wrap: break-word;
-                            white-space: normal;
-                        }
-                    }
-                }
-
-                .contacts__form__input div {
-                    flex-direction: column;
-                }
-            }
-        }
+        @include query.media-tablet-form;
     }
 
     @media (min-width: 769px) and (max-width: 1040px) {
-        width: 100%;
-        padding: 0 2.9rem 0 2.9rem;
-
-        .contacts__content {
-            .contacts__info {
-                .contacts__address {
-                    .contacts__address__important-info p {
-                        font-size: 1.4rem;
-                    }
-                }
-            }
-
-            .contacts__form__container {
-                .contacts__form__question {
-                    font-size: var.$fz-h2-tablet;
-                }
-
-                .contacts__form {
-                    .contacts__form__input {
-                        margin-right: 1.4rem;
-                        margin-bottom: 2rem;
-                        gap: 1.2rem;
-
-                        .contacts__form__row {
-                            display: flex;
-                            flex-direction: column;
-                            gap: 1rem;
-                        }
-                    }
-
-                    .contacts__form__agreement {
-                        align-items: baseline;
-                        margin-bottom: 2.1rem;
-
-                        & label {
-                            overflow-wrap: break-word;
-                            white-space: normal;
-                        }
-                    }
-                }
-
-                .contacts__form__input div {
-                    flex-direction: column;
-                }
-            }
-        }
+        @include query.media-tablet-form;
     }
 }
