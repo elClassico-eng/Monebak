@@ -149,6 +149,11 @@
                         color: rgba(121, 121, 134, 1);
                     }
 
+                    .contacts__form__label input:focus,
+                    .contacts__form__label textarea:focus {
+                        background-color: #fff;
+                    }
+
                     .contacts__form__input-error {
                         font-size: 1.2rem;
                         color: var.$main-red;
