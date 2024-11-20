@@ -3,10 +3,9 @@ ymaps.ready(init);
 function init() {
     const map = new ymaps.Map("map", {
         center: [48.708048, 44.513303],
-        zoom: 4, // Масштаб карты
+        zoom: 4,
     });
 
-    // Список городов с координатами
     const cities = [
         { name: "Москва", coords: [55.755826, 37.6173] },
         { name: "Волгоград", coords: [48.708048, 44.513303] },
@@ -17,19 +16,27 @@ function init() {
         { name: "Новосибирск", coords: [55.008353, 82.935733] },
     ];
 
-    // Добавление маркеров для каждого города
     cities.forEach((city) => {
         const placemark = new ymaps.Placemark(
             city.coords,
             {
-                balloonContent: `<strong>${city.name}</strong>`, // Текст внутри всплывающего окна
+                balloonContent: `<strong>${city.name}</strong>`,
             },
             {
-                preset: "islands#icon",
-                iconColor: "#0095b6",
+                preset: "islands#dotIcon",
+                iconColor: "#ff0000",
             }
+
+            /** Проблема с iconImageHref
+            {
+                iconLayout: "default#image",
+                iconImageHref: "../assets/icons/Mark.png",
+                iconImageSize: [36, 40],
+                iconImageOffset: [-15, -42],
+            }
+             */
         );
 
-        map.geoObjects.add(placemark); // Добавляем маркер на карту
+        map.geoObjects.add(placemark);
     });
 }

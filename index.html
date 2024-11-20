@@ -1,9 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>NeoBank</title>
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+        />
+        <meta
+            name="description"
+            content="Monebak — упаковка и упаковочное оборудование по низким ценам"
+        />
+        <title>Monebak</title>
+        <link
+            rel="icon"
+            type="image/svg+xml"
+            href="images/favicon115c7e2587f566d554ba.svg"
+        />
         <link rel="stylesheet" href="31d6cfe0d16ae931b73c.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,7 +27,17 @@
             src="https://api-maps.yandex.ru/2.1?apikey=41259b03-58a5-4b29-a1b1-ad6f0f5bf58a&lang=ru_RU"
             type="text/javascript"
         ></script>
-        <script src="eb33a5b94d3b150ffac9.js" defer></script>
+        <script src="493edb013ce4de58c3cb.js" defer></script>
+        <meta property="og:title" content="Monebak" />
+        <meta
+            property="og:description"
+            content="Monebak — упаковка и упаковочное оборудование по низким ценам"
+        />
+        <meta property="og:image" content="images/Logo0a4b2f09c1413148ad70.png" />
+        <meta
+            property="og:url"
+            content="https://elclassico-eng.github.io/Monebak/"
+        />
     <script defer src="bundle.js"></script></head>
     <body>
         <header class="header">
@@ -41,18 +63,14 @@
             <div class="header__logo">
                 <picture>
                     <source
-                        media="(max-width: 768px)"
-                        srcset="images/logo-tabletb32591bb15af133869a2.png"
-                    />
-                    <source
                         media="(max-width: 320px)"
-                        srcset="images/logo-mob6414cb9dcdf2e8020eea.png"
+                        srcset="images/Logo-mobilef49bed7463ef5e7f6244.svg"
                     />
                     <source
-                        media="(min-width: 769px)"
-                        srcset="images/Logo0a4b2f09c1413148ad70.png"
+                        media="(max-width: 768px)"
+                        srcset="images/Logo-tablet344ed40caf58d7a305ac.svg"
                     />
-                    <img src="images/Logo0a4b2f09c1413148ad70.png" alt="Monebak logo" />
+                    <img src="images/Logo115c7e2587f566d554ba.svg" alt="Monebak logo" />
                 </picture>
             </div>
             <div class="header__contact-info">
@@ -61,8 +79,8 @@
                     <img src="images/Поиск17eb0d35861d59d0a63f.svg" alt="Поиск" />
                 </div>
                 <div class="header__contact-details">
-                    <span>+7 (499) 136-17-18</span>
-                    <a href="#">info@monevac.ru</a>
+                    <a href="tel:+74991361718">+7 (499) 136-17-18</a>
+                    <a href="mailto:info@monevac.ru">info@monevac.ru</a>
                 </div>
                 <a href="#" class="header__contact-info__submit"
                     ><button>Оставить заявку</button></a
@@ -103,7 +121,7 @@
                                 <p>Сокращенное наименование: ООО «МОНЕВАК»</p>
                             </div>
 
-                            <div>
+                            <div class="contacts__address__codes">
                                 <p>ИНН: 3448050610</p>
                                 <p>КПП: 344801001</p>
                                 <p>КПП: 344801001</p>
@@ -113,7 +131,7 @@
                                 <p>Код по ОКВЭД: 51.70</p>
                             </div>
 
-                            <div>
+                            <div class="contacts__address__bank-info">
                                 <p>
                                     Банк: Филиала «Ростовский» ОАО «Альфа-Банк»
                                     г Ростов на Дону
@@ -123,7 +141,7 @@
                                 <p>р/с: 40702810926090000003</p>
                             </div>
 
-                            <div>
+                            <div class="contacts__address__location">
                                 <p>
                                     Юридический адрес: 400080, Волгоградская
                                     обл. г. Волгоград ул. Командира Рудь,14А,
@@ -138,32 +156,54 @@
                         </address>
                     </article>
                     <aside class="contacts__form__container">
-                        <h2>Остались вопросы?</h2>
+                        <h2 class="contacts__form__question">
+                            Остались вопросы?
+                        </h2>
                         <form action="#" method="post" class="contacts__form">
-                            <div class="contacts__form__input">
-                                <div>
-                                    <input
-                                        type="text"
-                                        name="name"
-                                        id="name"
-                                        placeholder="Ваше имя"
-                                        required
-                                    />
-                                    <input
-                                        type="text"
-                                        name="tel"
-                                        id="tel"
-                                        placeholder="Ваш телефон"
-                                        required
-                                    />
+                            <fieldset class="contacts__form__input">
+                                <div class="contacts__form__row">
+                                    <div class="contacts__form__label">
+                                        <input
+                                            type="text"
+                                            name="name"
+                                            id="name"
+                                            placeholder=" "
+                                            required
+                                        />
+                                        <label for="name">Ваше имя</label>
+                                        <span
+                                            class="contacts__form__input-error"
+                                            >Является обязательным полем</span
+                                        >
+                                    </div>
+                                    <div class="contacts__form__label">
+                                        <input
+                                            type="tel"
+                                            name="tel"
+                                            id="tel"
+                                            placeholder=" "
+                                            required
+                                        />
+                                        <label for="tel">Ваш телефон</label>
+                                        <span
+                                            class="contacts__form__input-error"
+                                            >Является обязательным полем</span
+                                        >
+                                    </div>
                                 </div>
-                                <textarea
-                                    name="tel"
-                                    id="tel"
-                                    placeholder="Ваше сообщение"
-                                    required
-                                ></textarea>
-                            </div>
+                                <div class="contacts__form__label">
+                                    <textarea
+                                        name="meaasge"
+                                        id="message"
+                                        placeholder=" "
+                                        required
+                                    ></textarea>
+                                    <label for="message">Ваше сообщение</label>
+                                    <span class="contacts__form__input-error"
+                                        >Является обязательным полем</span
+                                    >
+                                </div>
+                            </fieldset>
 
                             <div class="contacts__form__agreement">
                                 <input
@@ -189,7 +229,7 @@
                 </div>
             </section>
             <div id="map" class="map"></div>
-            <script src="061033ead2f79f919911.js"></script>
+            <script src="11686ca034a3a5955573.js"></script>
             <section class="branches-cards">
                 <div class="branch-card card_1">
                     <h4 class="branch-card__city">Москва</h4>
@@ -375,7 +415,9 @@
                                     +7 (903) 467-98-51
                                 </p>
                                 <p class="footer__feedback__email">
-                                    <a href="#" target="_blank"
+                                    <a
+                                        href="mailto:info@monevac.ru"
+                                        target="_blank"
                                         >info@monevac.ru</a
                                     >
                                 </p>
